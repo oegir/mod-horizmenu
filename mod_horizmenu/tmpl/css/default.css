@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+ul.nav.horizmenu,
+ul.nav.horizmenu ul {
+	list-style: none;
+	padding: 0;
+	position: relative;
+}
+ul.nav.horizmenu li {
+    float: left;
+}
+ul.nav.horizmenu li.parent ul {
+/* 	display: none; */
+	position: absolute;
+}
+/* ul.nav.horizmenu li.parent:HOVER > ul { */
+/* 	display: block; */
+/* } */
+ul.nav.horizmenu li.parent li  {
+	clear: left;
+}
+.horizmenu_clr {
+    clear: left;
+}

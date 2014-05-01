@@ -78,17 +78,13 @@
 					<option value="9">J9</option>
 					<option value="10">J10</option>
 				</field>
-
+				
 				<field
-					name="showAllChildren"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="1"
-					label="MOD_HORIZMENU_FIELD_ALLCHILDREN_LABEL"
-					description="MOD_HORIZMENU_FIELD_ALLCHILDREN_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+					name="dropWidth"
+					type="text"
+					required="true"
+					label="MOD_HORIZMENU_FIELD_DROPWIDTH_LABEL"
+					description="MOD_HORIZMENU_FIELD_DROPNWIDTH_DESC" />
 			</fieldset>
 
 			<fieldset

@@ -12,9 +12,9 @@ defined('_JEXEC') or die;
 // Include the syndicate functions only once
 require_once __DIR__ . '/helper.php';
 
-$list		= ModMenuHelper::getList($params);
-$base		= ModMenuHelper::getBase($params);
-$active		= ModMenuHelper::getActive($params);
+$list		= ModHorizmenuHelper::getList($params);
+$base		= ModHorizmenuHelper::getBase($params);
+$active		= ModHorizmenuHelper::getActive($params);
 $active_id 	= $active->id;
 $path		= $base->tree;
 
@@ -23,5 +23,5 @@ $class_sfx	= htmlspecialchars($params->get('class_sfx'));
 
 if (count($list))
 {
-	require JModuleHelper::getLayoutPath('mod_menu', $params->get('layout', 'default'));
+	require JModuleHelper::getLayoutPath('mod_horizmenu', $params->get('layout', 'default'));
 }

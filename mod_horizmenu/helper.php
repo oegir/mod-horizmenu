@@ -38,14 +38,14 @@ class ModHorizmenuHelper
 		$levels = $user->getAuthorisedViewLevels();
 		asort($levels);
 		$key = 'menu_items' . $params . implode(',', $levels) . '.' . $base->id;
-		$cache = JFactory::getCache('mod_menu', '');
+		$cache = JFactory::getCache('mod_horizmenu', '');
 
 		if (!($items = $cache->get($key)))
 		{
 			$path    = $base->tree;
 			$start   = (int) $params->get('startLevel');
 			$end     = (int) $params->get('endLevel');
-			$showAll = $params->get('showAllChildren');
+			$showAll = true;
 			$items   = $menu->getItems('menutype', $params->get('menutype'));
 
 			$lastitem = 0;
