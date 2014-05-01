@@ -10,12 +10,12 @@ ul.nav.horizmenu li {
     float: left;
 }
 ul.nav.horizmenu li.parent ul {
-/* 	display: none; */
 	position: absolute;
+	visibility: hidden;
 }
-/* ul.nav.horizmenu li.parent:HOVER > ul { */
-/* 	display: block; */
-/* } */
+ul.nav.horizmenu li.parent:HOVER > ul {
+	visibility: visible;
+}
 ul.nav.horizmenu li.parent li  {
 	clear: left;
 }
