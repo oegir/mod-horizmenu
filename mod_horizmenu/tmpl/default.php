@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 $doc = JFactory::getDocument();
 $doc->addStyleSheet('modules/mod_horizmenu/tmpl/css/default.css');
+$deepWidth = $params->get('dropWidth', 0);
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
 <ul class="nav horizmenu menu<?php echo $class_sfx;?>"<?php
@@ -24,7 +25,6 @@ $doc->addStyleSheet('modules/mod_horizmenu/tmpl/css/default.css');
 	}
 ?>>
 <?php
-$deepLevel = 0;
 
 foreach ($list as $i => &$item)
 {
@@ -61,7 +61,6 @@ foreach ($list as $i => &$item)
 	if ($item->deeper)
 	{
 		$class .= ' deeper';
-		$deepLevel++;
 	}
 
 	if ($item->parent)
@@ -93,7 +92,12 @@ foreach ($list as $i => &$item)
 	// The next item is deeper.
 	if ($item->deeper)
 	{
-		echo '<ul class="nav-child unstyled small level-'.$deepLevel.'">';
+		$deepStyle = 'width:'.$deepWidth.'px;';
+		
+		if ($item->level > 1) {
+			$deepStyle .= 'padding-left:'.$deepWidth.'px;';
+		}
+		echo '<ul class="nav-child unstyled small level-'.$item->level.'" style="'.$deepStyle.'">';
 	}
 	elseif ($item->shallower)
 	{

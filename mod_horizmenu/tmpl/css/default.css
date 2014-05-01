@@ -16,6 +16,9 @@ ul.nav.horizmenu li.parent ul {
 ul.nav.horizmenu li.parent:HOVER > ul {
 	visibility: visible;
 }
+ul.nav.horizmenu li.parent li.parent a {
+    float: left;
+}
 ul.nav.horizmenu li.parent li  {
 	clear: left;
 }
