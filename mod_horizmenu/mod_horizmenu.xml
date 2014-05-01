@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later</license>
 	<authorEmail>alexey.webmail@gmail.com</authorEmail>
 	<authorUrl>https://plus.google.com/112429075996731149828</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>MOD_HORIZMENU_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_horizmenu">mod_horizmenu.php</filename>
