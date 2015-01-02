@@ -2,12 +2,12 @@
 <extension type="module" version="3.1" client="site" method="upgrade">
 	<name>mod_horizmenu</name>
 	<author>Alexey Petrov</author>
-	<creationDate>06.04.2014</creationDate>
-	<copyright>Copyright ©. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later</license>
+	<creationDate>02.01.2015</creationDate>
+	<copyright>Copyright © 2014 Alexey Petrov</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<authorEmail>alexey.webmail@gmail.com</authorEmail>
-	<authorUrl>https://plus.google.com/112429075996731149828</authorUrl>
-	<version>1.0.1</version>
+	<authorUrl>https://plus.google.com/+DevwebprogBlogspot/</authorUrl>
+	<version>1.1.0</version>
 	<description>MOD_HORIZMENU_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_horizmenu">mod_horizmenu.php</filename>
