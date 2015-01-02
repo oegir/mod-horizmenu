@@ -6,6 +6,9 @@ ul.nav.horizmenu ul {
 	padding: 0;
 	position: relative;
 }
+ul.nav.horizmenu li.deeper li.deeper {
+	width: 100%;
+}
 ul.nav.horizmenu li {
     float: left;
 }
@@ -24,9 +27,11 @@ ul.nav.horizmenu li.parent:HOVER > ul {
 ul.nav.horizmenu li.parent:HOVER .nav-child .nav-child {
 	
 }
-ul.nav.horizmenu li.parent li.parent a {
+ul.nav.horizmenu li.parent li.parent a,
+ul.nav.horizmenu li.parent li.parent .separator {
     float: left;
     white-space: nowrap;
+    width: 100%;
 }
 ul.nav.horizmenu li.parent li  {
 	clear: left;
