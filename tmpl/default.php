@@ -92,11 +92,7 @@ foreach ($list as $i => &$item)
 	// The next item is deeper.
 	if ($item->deeper)
 	{
-		$deepStyle = 'width:'.$deepWidth.'px;';
-		
-		if ($item->level > 1) {
-			$deepStyle .= 'padding-left:'.$deepWidth.'px;';
-		}
+		$deepStyle="";
 		echo '<ul class="nav-child unstyled small level-'.$item->level.'" style="'.$deepStyle.'">';
 	}
 	elseif ($item->shallower)

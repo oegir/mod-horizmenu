@@ -9,19 +9,31 @@ ul.nav.horizmenu ul {
 ul.nav.horizmenu li {
     float: left;
 }
+ul.nav.horizmenu li a {
+	display: block;
+}
 ul.nav.horizmenu li.parent ul {
 	position: absolute;
 	visibility: hidden;
+	margin: 0;
+	padding: 0;
 }
 ul.nav.horizmenu li.parent:HOVER > ul {
 	visibility: visible;
 }
+ul.nav.horizmenu li.parent:HOVER .nav-child .nav-child {
+	
+}
 ul.nav.horizmenu li.parent li.parent a {
     float: left;
+    white-space: nowrap;
 }
 ul.nav.horizmenu li.parent li  {
 	clear: left;
 }
 .horizmenu_clr {
     clear: left;
+}
+ul.nav.horizmenu .nav-child .nav-child {
+    left: 100%;
 }
