@@ -1,27 +1,33 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  mod_menu
- *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @subpackage  Modules.Horizmenu
+ * @copyright   © 2014 Alexey Petrov
+ * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
-
-defined('_JEXEC') or die;
+defined ( '_JEXEC' ) or die ();
 
 // Include the syndicate functions only once
 require_once __DIR__ . '/helper.php';
 
-$list		= ModHorizmenuHelper::getList($params);
-$base		= ModHorizmenuHelper::getBase($params);
-$active		= ModHorizmenuHelper::getActive($params);
-$active_id 	= $active->id;
-$path		= $base->tree;
+$list = ModHorizmenuHelper::getList ( $params );
+$base = ModHorizmenuHelper::getBase ( $params );
+$active = ModHorizmenuHelper::getActive ( $params );
+$active_id = $active->id;
+$path = $base->tree;
 
-$showAll	= $params->get('showAllChildren');
-$class_sfx	= htmlspecialchars($params->get('class_sfx'));
+$showAll = $params->get ( 'showAllChildren' );
+$class_sfx = htmlspecialchars ( $params->get ( 'class_sfx' ) );
 
-if (count($list))
-{
-	require JModuleHelper::getLayoutPath('mod_horizmenu', $params->get('layout', 'default'));
+$action = $app->input->get ( 'action', '', 'string' );
+
+switch ($action) {
+	case 'css' :
+		require JModuleHelper::getLayoutPath('mod_horizmenu', $params->get ( 'layout', 'default' ) . '_css');
+		break;
+	
+	default :
+		if (count ( $list )) {
+			require JModuleHelper::getLayoutPath ( 'mod_horizmenu', $params->get ( 'layout', 'default' ) );
+		}
 }

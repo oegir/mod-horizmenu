@@ -3,18 +3,19 @@
 	<name>mod_horizmenu</name>
 	<author>Alexey Petrov</author>
 	<creationDate>06.04.2014</creationDate>
-	<copyright>Copyright ©. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later</license>
+	<copyright>Copyright © 2014 Alexey Petrov</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<authorEmail>alexey.webmail@gmail.com</authorEmail>
-	<authorUrl>https://plus.google.com/112429075996731149828</authorUrl>
-	<version>1.0.6</version>
+	<authorUrl>https://plus.google.com/+DevwebprogBlogspot</authorUrl>
+	<version>1.1.0</version>
 	<description>MOD_HORIZMENU_XML_DESCRIPTION</description>
-	
+
 	<!-- Update servers -->
 	<updateservers>
-		<server type="extension" priority="1" name="Horizontal Menu">http://www.powerhost.pw/projects/mod_horizmenu/horizmenu-upgrade.xml</server>
+		<server type="extension" priority="1" name="Horizontal Menu">http://www.powerhost.pw/projects/mod_horizmenu/horizmenu-upgrade.xml
+		</server>
 	</updateservers>
-	
+
 	<files>
 		<filename module="mod_horizmenu">mod_horizmenu.php</filename>
 		<folder>tmpl</folder>
@@ -33,26 +34,14 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field
-					name="menutype"
-					type="menu"
-					label="MOD_HORIZMENU_FIELD_MENUTYPE_LABEL"
-					description="MOD_HORIZMENU_FIELD_MENUTYPE_DESC" />
-				<field
-					name="base"
-					type="menuitem"
-					label="MOD_HORIZMENU_FIELD_ACTIVE_LABEL"
-					description="MOD_HORIZMENU_FIELD_ACTIVE_DESC"
-					>
+				<field name="menutype" type="menu"
+					label="MOD_HORIZMENU_FIELD_MENUTYPE_LABEL" description="MOD_HORIZMENU_FIELD_MENUTYPE_DESC" />
+				<field name="base" type="menuitem" label="MOD_HORIZMENU_FIELD_ACTIVE_LABEL"
+					description="MOD_HORIZMENU_FIELD_ACTIVE_DESC">
 					<option value="">JCURRENT</option>
 				</field>
-				<field
-					name="startLevel"
-					type="list"
-					default="1"
-					label="MOD_HORIZMENU_FIELD_STARTLEVEL_LABEL"
-					description="MOD_HORIZMENU_FIELD_STARTLEVEL_DESC"
-				>
+				<field name="startLevel" type="list" default="1"
+					label="MOD_HORIZMENU_FIELD_STARTLEVEL_LABEL" description="MOD_HORIZMENU_FIELD_STARTLEVEL_DESC">
 					<option value="1">J1</option>
 					<option value="2">J2</option>
 					<option value="3">J3</option>
@@ -65,13 +54,8 @@
 					<option value="10">J10</option>
 				</field>
 
-				<field
-					name="endLevel"
-					type="list"
-					default="0"
-					label="MOD_HORIZMENU_FIELD_ENDLEVEL_LABEL"
-					description="MOD_HORIZMENU_FIELD_ENDLEVEL_DESC"
-					>
+				<field name="endLevel" type="list" default="0"
+					label="MOD_HORIZMENU_FIELD_ENDLEVEL_LABEL" description="MOD_HORIZMENU_FIELD_ENDLEVEL_DESC">
 					<option value="0">JALL</option>
 					<option value="1">J1</option>
 					<option value="2">J2</option>
@@ -84,63 +68,56 @@
 					<option value="9">J9</option>
 					<option value="10">J10</option>
 				</field>
+				<field name="floating" type="list" default="0"
+					label="MOD_HORIZMENU_FIELD_FLOATING_LABEL" description="MOD_HORIZMENU_FIELD_FLOATING_DESC">
+					<option value="0">MOD_HORIZMENU_FIELD_FLOATING_LEFT</option>
+					<option value="1">MOD_HORIZMENU_FIELD_FLOATING_RIGHT</option>
+				</field>
+				<field type="spacer" name="ads"
+					label="
+          &lt;script type=&#34;text/javascript&#34;&gt;
+          jQuery(document).ready(function () {
+            var lng = navigator.browserLanguage || navigator.language || navigator.userLanguage;
+            if(lng.indexOf(&#34;ru&#34;) + 1) {
+              jQuery(&#34;#adv-context&#34;).attr(&#34;src&#34;, &#34;http://develop.powerhost.pw/banners/mod-horizmenu&#34;);
+            } else {
+              jQuery(&#34;#adv-context&#34;).attr(&#34;src&#34;, &#34;http://develop.powerhost.pw/en/banners/mod-horizmenu&#34;);
+            }
+          });
+          &lt;/script&gt;
+          &lt;iframe
+          id=&#34;adv-context&#34;
+          src=&#34;&#34;
+          style=&#34;border:none;width:500px;height:100px;&#34;
+          &gt;&lt;/iframe&gt;
+          " />
 			</fieldset>
 
-			<fieldset
-				name="advanced">
-				<field
-					name="tag_id"
-					type="text"
-					label="MOD_HORIZMENU_FIELD_TAG_ID_LABEL"
+			<fieldset name="advanced">
+				<field name="tag_id" type="text" label="MOD_HORIZMENU_FIELD_TAG_ID_LABEL"
 					description="MOD_HORIZMENU_FIELD_TAG_ID_DESC" />
 
-				<field
-					name="class_sfx"
-					type="text"
-					label="MOD_HORIZMENU_FIELD_CLASS_LABEL"
+				<field name="class_sfx" type="text" label="MOD_HORIZMENU_FIELD_CLASS_LABEL"
 					description="MOD_HORIZMENU_FIELD_CLASS_DESC" />
 
-				<field
-					name="window_open"
-					type="text"
-					label="MOD_HORIZMENU_FIELD_TARGET_LABEL"
-					description="MOD_HORIZMENU_FIELD_TARGET_DESC" />
+				<field name="window_open" type="text"
+					label="MOD_HORIZMENU_FIELD_TARGET_LABEL" description="MOD_HORIZMENU_FIELD_TARGET_DESC" />
 
-				<field
-					name="layout"
-					type="modulelayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
 					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
 
-				<field
-					name="moduleclass_sfx"
-					type="textarea" rows="3"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="moduleclass_sfx" type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 
-				<field
-					name="cache"
-					type="list"
-					default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				<field name="cache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
-				<field
-					name="cache_time"
-					type="text"
-					default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-				<field
-					name="cachemode"
-					type="hidden"
-					default="itemid">
-					<option
-						value="itemid"></option>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
 				</field>
 			</fieldset>
 		</fields>
